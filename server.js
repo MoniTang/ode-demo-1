@@ -40,6 +40,8 @@ var server = http.createServer(function (request, response) {
 
     } else {
         response.statusCode = 404
+        response.setHeader('Content-Type', 'text/html;charset=utf-8')
+        response.write(`你访问的页面不存在`)
         response.end()
 
     }
